@@ -40,6 +40,7 @@ window.onload = function() {
 function doCheck(str) {
 	let newStr = '';
 	//convert letters to number
+	str = str.toLowerCase();
 	for(idx in str) {
 		if('abcdefghijklmnopqrstuvwxyz'.indexOf(str[idx])!=-1) {
 			// console.log(dict[ str[idx] ]);
