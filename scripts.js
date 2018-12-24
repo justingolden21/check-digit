@@ -45,7 +45,7 @@ function doCheck(str) {
 		if('abcdefghijklmnopqrstuvwxyz'.indexOf(str[idx])!=-1) {
 			// console.log(dict[ str[idx] ]);
 			newStr += dict[ str[idx] ];
-		} else {
+		} else if(!isNaN(parseInt(str[idx]) ) ) {
 			newStr += str[idx];
 		}
 	}
