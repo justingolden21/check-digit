@@ -1,3 +1,4 @@
 copy/paste buttons
 show length
 customize check digit formula
+add history

@@ -29,13 +29,18 @@ let dict = {
 	'z':9
 }
 
-//testcase: 02202123456789000jone06120600000013500
+$(function() {
+	$("#info-alert").hide();
 
-window.onload = function() {
 	$('#input').change(function() {
 		$('#output').val(doCheck($(this).val() ) );
 	});
-}
+
+	$("#copy-btn").click(copyUrl);	
+});
+
+//testcase: 02202123456789000jone06120600000013500
+//expected: 4
 
 function doCheck(str) {
 	let newStr = '';
@@ -74,3 +79,25 @@ function doCheck(str) {
 	return Math.round(result);
 }
 
+//--------------------------------
+//--------------------------------
+
+function showAlert(message, sec) {
+	$('#alert-p').html(message);
+
+	$("#info-alert").show();
+
+	setTimeout( ()=> {
+		$("#info-alert").hide();
+	}, sec*1000);
+}
+
+function copyUrl() {
+	showAlert('<i class="fas fa-copy"></i> URL has been copied to your clipboard.', 3);
+
+	let tmp = $('<input type="text">').appendTo(document.body);
+	tmp.val(window.location.href);
+	tmp.select();
+	document.execCommand('copy');
+	tmp.remove();
+}
