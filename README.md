@@ -66,3 +66,5 @@ For example:
 <code>
 123 => 12.3 => 0.3 => 3 => 10-3 => 7
 </code>
+
+Note: If result would be 10, it's 0 instead.

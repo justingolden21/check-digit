@@ -78,7 +78,11 @@ function doCheck(str) {
 	}
 
 	let result = 10 - ( ( sum/10 ) %1 *10);
-	return Math.round(result);
+	result = Math.round(result);
+	if(result == 10) {
+		result = 0;
+	}
+	return result;
 }
 
 //--------------------------------
