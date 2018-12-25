@@ -41,6 +41,8 @@ Numbers are converted to letters with the following dictionary:
 	'z':9
 </code>
 
+Dashes (-) are treated as 0s and take up a spaace.
+
 Remaining non-numeral characters are ignored.
 
 Step 2:

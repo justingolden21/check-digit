@@ -50,6 +50,8 @@ function doCheck(str) {
 		if('abcdefghijklmnopqrstuvwxyz'.indexOf(str[idx])!=-1) {
 			// console.log(dict[ str[idx] ]);
 			newStr += dict[ str[idx] ];
+		} else if(str[idx]=='-') { //dashes are 0s
+			newStr += '0';
 		} else if(!isNaN(parseInt(str[idx]) ) ) {
 			newStr += str[idx];
 		}
