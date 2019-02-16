@@ -33,7 +33,10 @@ $(function() {
 	$("#info-alert").hide();
 
 	$('#input').change(function() {
+		$('#output').prop('disabled','false');
 		$('#output').val(doCheck($(this).val() ) );
+		$('#output').prop('disabled','true');
+
 		$('#lenPara').html('Input Length: ' + $(this).val().length);
 	});
 
