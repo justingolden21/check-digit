@@ -39,16 +39,16 @@ $(function() {
 
 		$('#lenPara').html('Input Length: ' + $(this).val().length);
 
-		$('#findDigitInput').change();
+		$('#findCharacterInput').change();
 	});
 
 	$("#copy-btn").click(copyUrl);
 
-	$('#findDigitInput').change(function() {
-		$('#findDigitOutput').prop('disabled','false');
-		let digitAt = $('#input').val().charAt($('#findDigitInput').val()-1);
-		$('#findDigitOutput').val(digitAt);
-		$('#findDigitOutput').prop('disabled','true');
+	$('#findCharacterInput').change(function() {
+		$('#findCharacterOutput').prop('disabled','false');
+		let digitAt = $('#input').val().charAt($(this).val()-1);
+		$('#findCharacterOutput').val(digitAt);
+		$('#findCharacterOutput').prop('disabled','true');
 	});
 });
 
