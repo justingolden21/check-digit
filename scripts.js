@@ -38,9 +38,18 @@ $(function() {
 		$('#output').prop('disabled','true');
 
 		$('#lenPara').html('Input Length: ' + $(this).val().length);
+
+		$('#findDigitInput').change();
 	});
 
-	$("#copy-btn").click(copyUrl);	
+	$("#copy-btn").click(copyUrl);
+
+	$('#findDigitInput').change(function() {
+		$('#findDigitOutput').prop('disabled','false');
+		let digitAt = $('#input').val().charAt($('#findDigitInput').val()-1);
+		$('#findDigitOutput').val(digitAt);
+		$('#findDigitOutput').prop('disabled','true');
+	});
 });
 
 //testcase: 02202123456789000jone06120600000013500
