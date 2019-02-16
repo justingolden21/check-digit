@@ -50,6 +50,11 @@ $(function() {
 		$('#findCharacterOutput').val(digitAt);
 		$('#findCharacterOutput').prop('disabled','true');
 	});
+
+	$('#fontSizeInput').change(function() {
+		$('#input').css('font-size',$(this).val()+'px');
+		$('#fontSizeSpan').html($(this).val() );
+	});
 });
 
 //testcase: 02202123456789000jone06120600000013500
