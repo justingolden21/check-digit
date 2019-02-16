@@ -34,6 +34,7 @@ $(function() {
 
 	$('#input').change(function() {
 		$('#output').val(doCheck($(this).val() ) );
+		$('#lenPara').html('Input Length: ' + $(this).val().length);
 	});
 
 	$("#copy-btn").click(copyUrl);	
